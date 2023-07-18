@@ -3,7 +3,7 @@ package july18;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MultipleCatch {
+public class MultiCatch {
 	public static void main(String[] args) {
 		try {
 			Scanner sc = new Scanner(System.in);
@@ -29,17 +29,12 @@ public class MultipleCatch {
 			System.out.println("Value is inserted");
 		}catch(ArithmeticException e) {
 			System.out.println("ArithmeticException handled");
-		}catch(NegativeArraySizeException e) {
-			System.out.println("NegativeArraySizeException  handled");
-		}catch(ArrayIndexOutOfBoundsException e) {
-			System.out.println("ArrayIndexOutOfBoundsException handled");
+		}catch(NegativeArraySizeException | ArrayIndexOutOfBoundsException | NullPointerException e) {
+			System.out.println("Array exceptions  handled");
 		}catch(InputMismatchException e) {
 			System.out.println("InputMismatchException handled");
-		}catch(NullPointerException e) {
-			System.out.println("NullPointerException handled");
 		}catch(Exception e) {
 			System.out.println("Generic Exception handled");
 		}
-		
 	}
 }
